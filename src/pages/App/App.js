@@ -2,11 +2,8 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 import './App.css';
 import BensThings from '../BensThings/BensThings'
-<<<<<<< HEAD
 import KarensThings from '../KarensThings/KarensThings'
-=======
 import RobsThings from '../RobsThings/RobsThings'
->>>>>>> 711f3f3bb9d1df666d2f055eb64fb0ff4eb2ec22
 
 class App extends Component {
   state = { 
@@ -77,7 +74,6 @@ class App extends Component {
         attributes: ["makes you live a long time", "consistent poops", "probably tacos sometimes!", "farm to market"], 
       },
     ],
-<<<<<<< HEAD
     karensThings: [
       {name: "Tacos",
       image: "https://www.kimscravings.com/wp-content/uploads/2015/09/Mexican-Taco-Meat-4-640x960.jpg",
@@ -95,8 +91,7 @@ class App extends Component {
       image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Muralitharan_bowling_to_Adam_Gilchrist.jpg/1024px-Muralitharan_bowling_to_Adam_Gilchrist.jpg",
       attributes: ["willow bats", "round pitch", "better than baseball"]
     }
-    ]
-=======
+    ],
     robsThings: [
       {
         name: "formula 1 racing",
@@ -120,7 +115,6 @@ class App extends Component {
       },
     ]  
 
->>>>>>> 711f3f3bb9d1df666d2f055eb64fb0ff4eb2ec22
   } 
   render() {
     return (
@@ -132,6 +126,7 @@ class App extends Component {
               {/* All the <a> tags should live here */}
               <h2>All-The-Things</h2>
               <a href="/themanliestthings">Ben's Things</a><br/>
+              <a href="/krnsthings">Karen's Things</a><br/>
               <a href="/thesleepiestthings">Rob's Things</a> 
             </>
           }
@@ -144,7 +139,6 @@ class App extends Component {
               bensThings={this.state.bensThings}
             />
         }/>
-<<<<<<< HEAD
 
         <Route 
           exact path='/krnsthings'
@@ -154,7 +148,6 @@ class App extends Component {
             />
           }/>
 
-=======
         <Route 
           exact path='/thesleepiestthings'
           render={() => 
@@ -162,7 +155,6 @@ class App extends Component {
               robsThings={this.state.robsThings}
             />
         }/>
->>>>>>> 711f3f3bb9d1df666d2f055eb64fb0ff4eb2ec22
       </>
       
     );
