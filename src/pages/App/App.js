@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 import './App.css';
 import BensThings from '../BensThings/BensThings'
+<<<<<<< HEAD
 import KarensThings from '../KarensThings/KarensThings'
+=======
+import RobsThings from '../RobsThings/RobsThings'
+>>>>>>> 711f3f3bb9d1df666d2f055eb64fb0ff4eb2ec22
 
 class App extends Component {
   state = { 
@@ -73,6 +77,7 @@ class App extends Component {
         attributes: ["makes you live a long time", "consistent poops", "probably tacos sometimes!", "farm to market"], 
       },
     ],
+<<<<<<< HEAD
     karensThings: [
       {name: "Tacos",
       image: "https://www.kimscravings.com/wp-content/uploads/2015/09/Mexican-Taco-Meat-4-640x960.jpg",
@@ -91,6 +96,31 @@ class App extends Component {
       attributes: ["willow bats", "round pitch", "better than baseball"]
     }
     ]
+=======
+    robsThings: [
+      {
+        name: "formula 1 racing",
+        image: "https://i.pinimg.com/originals/fd/51/dd/fd51dd82fcff99b3fd0d4dc2c99e6b4c.jpg",  
+        attributes: ["fast", "fun", "dangerous", "risk-calculation"],
+      },
+      {
+        name: "Beer",
+        image: "https://media-cdn.tripadvisor.com/media/photo-s/08/1f/30/56/beer-beautiful-beer.jpg",
+        attributes: ["tasty", "leads to fun times", "leads to not so fun times", "readily available"], 
+      },
+      {
+        name: "Games",
+        image: "https://singularityhub.com/wp-content/uploads/2018/11/young-gamer-playing-video-game_shutterstock_624801452.jpg",
+        attributes: ["very attractive", "useful probably!", "good for pwning noobs", "such hip", "played by all the cool kids"],
+      },
+      { 
+        name: "Healthy food", 
+        image: "https://miro.medium.com/max/8064/1*yJ8btq82OFOAhJQLigoQpQ.jpeg", 
+        attributes: ["tastes good?", "consistent poops maybe?", "probably tacos sometimes!", "it might have come from a farm somewhere, at least one ingredient did!"], 
+      },
+    ]  
+
+>>>>>>> 711f3f3bb9d1df666d2f055eb64fb0ff4eb2ec22
   } 
   render() {
     return (
@@ -101,7 +131,8 @@ class App extends Component {
             <>
               {/* All the <a> tags should live here */}
               <h2>All-The-Things</h2>
-              <a href="/themanliestthings">Ben's Things</a> 
+              <a href="/themanliestthings">Ben's Things</a><br/>
+              <a href="/thesleepiestthings">Rob's Things</a> 
             </>
           }
         />
@@ -113,6 +144,7 @@ class App extends Component {
               bensThings={this.state.bensThings}
             />
         }/>
+<<<<<<< HEAD
 
         <Route 
           exact path='/krnsthings'
@@ -122,6 +154,15 @@ class App extends Component {
             />
           }/>
 
+=======
+        <Route 
+          exact path='/thesleepiestthings'
+          render={() => 
+            <RobsThings
+              robsThings={this.state.robsThings}
+            />
+        }/>
+>>>>>>> 711f3f3bb9d1df666d2f055eb64fb0ff4eb2ec22
       </>
       
     );
