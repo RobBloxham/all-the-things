@@ -3,6 +3,9 @@ import { Route } from 'react-router-dom'
 import './App.css';
 import BensThings from '../BensThings/BensThings'
 import KarensThings from '../KarensThings/KarensThings'
+import RobsThings from '../RobsThings/RobsThings'
+
+
 
 class App extends Component {
   state = { 
@@ -90,7 +93,33 @@ class App extends Component {
       image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Muralitharan_bowling_to_Adam_Gilchrist.jpg/1024px-Muralitharan_bowling_to_Adam_Gilchrist.jpg",
       attributes: ["willow bats", "round pitch", "better than baseball"]
     }
+    ],
+    robsThings: [
+      {
+        name: "formula 1 racing",
+        image: "https://i.pinimg.com/originals/fd/51/dd/fd51dd82fcff99b3fd0d4dc2c99e6b4c.jpg",  
+        attributes: ["fast", "fun", "dangerous", "risk-calculation"],
+      },
+      {
+        name: "Beer",
+        image: "https://media-cdn.tripadvisor.com/media/photo-s/08/1f/30/56/beer-beautiful-beer.jpg",
+        attributes: ["tasty", "leads to fun times", "leads to not so fun times", "readily available"], 
+      },
+      {
+        name: "Games",
+        image: "https://singularityhub.com/wp-content/uploads/2018/11/young-gamer-playing-video-game_shutterstock_624801452.jpg",
+        attributes: ["very attractive", "useful probably!", "good for pwning noobs", "such hip", "played by all the cool kids"],
+      },
+      { 
+        name: "Healthy food", 
+        image: "https://miro.medium.com/max/8064/1*yJ8btq82OFOAhJQLigoQpQ.jpeg", 
+        attributes: ["tastes good?", "consistent poops maybe?", "probably tacos sometimes!", "it might have come from a farm somewhere, at least one ingredient did!"], 
+      },
+    ]  
+
+
     ]
+
   } 
   render() {
     return (
@@ -102,6 +131,7 @@ class App extends Component {
               {/* All the <a> tags should live here */}
               <h2>All-The-Things</h2>
               <a href="/themanliestthings">Ben's Things</a><br/>
+              <a href="/krnsthings">Karen's Things</a><br/>
               <a href="/thesleepiestthings">Rob's Things</a> 
             </>
           }
@@ -122,6 +152,16 @@ class App extends Component {
               karensThings={this.state.karensThings} 
             />
           }/>
+
+
+        <Route 
+          exact path='/thesleepiestthings'
+          render={() => 
+            <RobsThings
+              robsThings={this.state.robsThings}
+            />
+        }/>
+
 
       </>
       
