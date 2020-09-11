@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 import './App.css';
 import BensThings from '../BensThings/BensThings'
+import KarensThings from '../KarensThings/KarensThings'
 
 class App extends Component {
   state = { 
@@ -71,7 +72,25 @@ class App extends Component {
         image: "https://i.imgur.com/gRxOxsA.jpg", 
         attributes: ["makes you live a long time", "consistent poops", "probably tacos sometimes!", "farm to market"], 
       },
-    ] 
+    ],
+    karensThings: [
+      {name: "Tacos",
+      image: "https://www.kimscravings.com/wp-content/uploads/2015/09/Mexican-Taco-Meat-4-640x960.jpg",
+      attributes: ["corn tortilla", "cilantro", "onions"]
+    },
+      {name: "Cats",
+      image: "https://i2.wp.com/metro.co.uk/wp-content/uploads/2014/02/pa-2067052.jpg?quality=90&strip=all&zoom=1&resize=644%2C430&ssl=1",
+      attributes: ["furry", "loud", "snuggly"]
+    },
+      {name: "Coffee",
+      image: "https://enjoyjava.com/wp-content/uploads/2018/01/How-to-make-strong-coffee.jpg",
+      attributes: ["gift from the gods", "half and half only", "dark roast"]
+    },
+      {name: "Cricket",
+      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Muralitharan_bowling_to_Adam_Gilchrist.jpg/1024px-Muralitharan_bowling_to_Adam_Gilchrist.jpg",
+      attributes: ["willow bats", "round pitch", "better than baseball"]
+    }
+    ]
   } 
   render() {
     return (
@@ -94,6 +113,15 @@ class App extends Component {
               bensThings={this.state.bensThings}
             />
         }/>
+
+        <Route 
+          exact path='/krnsthings'
+          render={() =>
+            <KarensThings
+              karensThings={this.state.karensThings} 
+            />
+          }/>
+
       </>
       
     );
